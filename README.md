@@ -1,3 +1,9 @@
+<p align="left">
+  <a href="http://rapidapi.com">
+    <img src="https://storage.googleapis.com/rapidapi-temp/background.png"/>
+  </a>
+</p>
+
 # GoogleCloudVision Package
 Detect faces, labels, logos, text and more in images.
 * Domain: google.com
