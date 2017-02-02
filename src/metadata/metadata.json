@@ -1,0 +1,457 @@
+{
+  "package": "GoogleCloudVision",
+  "tagline": "Google Cloud Vision API",
+  "description": "Detect faces, labels, logos, text and more in images.",
+  "image": "http:\/\/logo.clearbit.com\/google.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-GoogleCloudVision-package",
+  "keywords": ["Google", "face", "facial", "image", "images", "learning", "machine", "recognition", "vision", "visual", "visuals"],
+  "accounts": {
+    "domain": "google.com",
+    "credentials": ["apiKey"]
+  },
+  "blocks": [
+    {
+      "name": "detectFaces",
+      "description": "Detects multiple faces within an image, along with the associated key facial attributes like emotional state or wearing headwear.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "maxResults",
+          "type": "Number",
+          "info": "Maximum results to return",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "detectLabels",
+      "description": "Detects broad sets of categories within an image, ranging from modes of transportation to animals.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "maxResults",
+          "type": "Number",
+          "info": "Maximum results to return",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "detectLandmarks",
+      "description": "Detects popular natural and man-made structures within an image.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "maxResults",
+          "type": "Number",
+          "info": "Maximum results to return",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "detectText",
+      "description": "Performs Optical Character Recognition. It detects and extracts text within an image, with support for a broad range of languages, along with support for automatic language identification.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "languageHints",
+          "type": "String",
+          "info": "List of languages to use for text detection.",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "detectLogos",
+      "description": "Detects popular product logos within an image.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "maxResults",
+          "type": "Number",
+          "info": "Maximum results to return",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "detectImageProperties",
+      "description": "Detects general attributes of the image, such as dominant color.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "detectExplicitContent",
+      "description": "Detects explicit content like adult content or violent content within an image.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "Single image for analysis.",
+          "required": true
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "batchPictureDetections",
+      "description": "Detects 1 property for several images",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "images",
+          "type": "Array",
+          "info": "Several images for analysis.",
+          "required": true
+        }, {
+          "name": "type",
+          "type": "String",
+          "info": "One type of analysis. Possible values: faces|labels|landmarks|text|logos|imageproperties|explicitcontent.",
+          "required": true
+        }, {
+          "name": "maxResults",
+          "type": "Number",
+          "info": "Maximum results to return (same for all requested pictures).",
+          "required": false
+        }, {
+          "name": "languageHints",
+          "type": "String",
+          "info": "List of languages to use for text detection. Applied only if 'text' type chosen",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0] (same for all requested pictures)..",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0] (same for all requested pictures)..",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0] (same for all requested pictures)..",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0] (same for all requested pictures)..",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }, {
+      "name": "batchTypeDetections",
+      "description": "Detects several properties for one image.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "The api key obtained from Google Developers Console.",
+          "required": true
+        }, {
+          "name": "image",
+          "type": "String",
+          "info": "One image for analysis.",
+          "required": true
+        }, {
+          "name": "types",
+          "type": "Array",
+          "info": "Types of analysis. Possible values: faces, labels, landmarks, text, logos, imageproperties, explicitcontent.",
+          "required": true
+        }, {
+          "name": "maxResults",
+          "type": "Number",
+          "info": "Maximum results to return",
+          "required": false
+        }, {
+          "name": "languageHints",
+          "type": "String",
+          "info": "List of languages to use for text detection. Applied only if 'text' type also chosen",
+          "required": false
+        }, {
+          "name": "minLatitude",
+          "type": "String",
+          "info": "Minimal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "minLongitude",
+          "type": "String",
+          "info": "Minimal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }, {
+          "name": "maxLatitude",
+          "type": "String",
+          "info": "Maximal latitude in degrees. It must be in the range [-90.0, +90.0].",
+          "required": false
+        }, {
+          "name": "maxLongitude",
+          "type": "String",
+          "info": "Maximal longitude in degrees. It must be in the range [-180.0, +180.0].",
+          "required": false
+        }
+      ],
+      "callbacks":[{
+        "name": "error",
+        "info": "error"
+      }, {
+        "name": "success",
+        "info": "success"
+      }]
+    }
+  ]
+}
