@@ -405,7 +405,7 @@
           "required": true
         }, {
           "name": "image",
-          "type": "file",
+          "type": "File",
           "info": "One image for analysis.",
           "required": true
         }, {
