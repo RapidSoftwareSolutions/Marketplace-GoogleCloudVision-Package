@@ -113,9 +113,9 @@ Detects 1 property for several images
 |--------------|------------|----------
 | apiKey       | credentials| The api key obtained from Google Developers Console.
 | images       | Array      | Several images for analysis.
-| type         | String     | One type of analysis. Possible values: faces|labels|landmarks|text|logos|imageproperties|explicitcontent.
+| type         | String     | One type of analysis. `Possible values: faces|labels|landmarks|text|logos|imageproperties|explicitcontent.`
 | maxResults   | Number     | Maximum results to return (same for all requested pictures).
-| languageHints| String     | List of languages to use for text detection. Applied only if 'text' type chosen
+| languageHints| String     | List of languages to use for text detection. Applied only if `text` type chosen
 | minLatitude  | String     | Minimal latitude in degrees. It must be in the range [-90.0, +90.0] (same for all requested pictures)..
 | minLongitude | String     | Minimal longitude in degrees. It must be in the range [-180.0, +180.0] (same for all requested pictures)..
 | maxLatitude  | String     | Maximal latitude in degrees. It must be in the range [-90.0, +90.0] (same for all requested pictures)..
@@ -128,9 +128,9 @@ Detects several properties for one image.
 |--------------|------------|----------
 | apiKey       | credentials| The api key obtained from Google Developers Console.
 | image        | String     | One image for analysis.
-| types        | Array      | Types of analysis. Possible values: faces, labels, landmarks, text, logos, imageproperties, explicitcontent.
+| types        | Array      | Types of analysis. `Possible values: faces, labels, landmarks, text, logos, imageproperties, explicitcontent.`
 | maxResults   | Number     | Maximum results to return
-| languageHints| String     | List of languages to use for text detection. Applied only if 'text' type also chosen
+| languageHints| String     | List of languages to use for text detection. Applied only if `text` type also chosen
 | minLatitude  | String     | Minimal latitude in degrees. It must be in the range [-90.0, +90.0].
 | minLongitude | String     | Minimal longitude in degrees. It must be in the range [-180.0, +180.0].
 | maxLatitude  | String     | Maximal latitude in degrees. It must be in the range [-90.0, +90.0].
