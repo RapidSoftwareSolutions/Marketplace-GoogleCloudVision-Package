@@ -113,7 +113,7 @@ Detects 1 property for several images
 |--------------|------------|----------
 | apiKey       | credentials| The api key obtained from Google Developers Console.
 | images       | Array      | Several images for analysis.
-| type         | String     | One type of analysis. `Possible values: faces|labels|landmarks|text|logos|imageproperties|explicitcontent.`
+| type         | String     | One type of analysis. `Possible values: faces or labels or landmarks or text or logos or imageproperties or explicitcontent.`
 | maxResults   | Number     | Maximum results to return (same for all requested pictures).
 | languageHints| String     | List of languages to use for text detection. Applied only if `text` type chosen
 | minLatitude  | String     | Minimal latitude in degrees. It must be in the range [-90.0, +90.0] (same for all requested pictures)..
