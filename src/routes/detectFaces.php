@@ -13,7 +13,7 @@ $app->post('/api/GoogleCloudVision/detectFaces', function($request, $response, $
 
     //forming request to vendor API
     $body = array();
-    $body['requests']['image']['source']['image_uri'] = $post_data['args']['image'];
+    $body['requests']['image']['content'] = base64_encode(file_get_contents($post_data['args']['image']));
     $body['requests']['features']['type'] = 'FACE_DETECTION';
 
     //optional limit for number of results

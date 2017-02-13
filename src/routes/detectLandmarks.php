@@ -13,7 +13,7 @@ $app->post('/api/GoogleCloudVision/detectLandmarks', function($request, $respons
 
     //forming request to vendor API
     $body = array();
-    $body['requests']['image']['source']['gcsImageUri'] = $post_data['args']['image'];
+    $body['requests']['image']['content'] = base64_encode(file_get_contents($post_data['args']['image']));
     $body['requests']['features']['type'] = 'LANDMARK_DETECTION';
 
     //optional limit for number of results

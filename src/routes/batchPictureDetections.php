@@ -24,7 +24,7 @@ $app->post('/api/GoogleCloudVision/batchPictureDetections', function ($request, 
     //forming request to vendor API
     $body = array();
     for ($i = 0; $i < count($post_data['args']['images']); $i++) {
-        $body['requests'][$i]['image']['source']['gcsImageUri'] = $post_data['args']['images'][$i];
+        $body['requests'][$i]['image']['content'] = base64_encode(file_get_contents($post_data['args']['image']));
         $body['requests'][$i]['features']['type'] = $type[$post_data['args']['type']];
         if ($post_data['args']['type'] == 'text') {
             //optional list of languages

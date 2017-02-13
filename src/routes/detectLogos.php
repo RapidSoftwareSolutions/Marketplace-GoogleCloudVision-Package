@@ -13,7 +13,7 @@ $app->post('/api/GoogleCloudVision/detectLogos', function($request, $response, $
 
     //forming request to vendor API
     $body = array();
-    $body['requests']['image']['source']['gcsImageUri'] = $post_data['args']['image'];
+    $body['requests']['image']['content'] = base64_encode(file_get_contents($post_data['args']['image']));
     $body['requests']['features']['type'] = 'LOGO_DETECTION';
 
     //optional limit for number of results
