@@ -1,11 +1,11 @@
 <?php
-$app->post('/api/GoogleCloudVision/detectLabels', function($request, $response, $args){
+$app->post('/api/GoogleCloudVision/detectLabels', function ($request, $response, $args) {
     $settings = $this->settings;
 
     //checking properly formed json
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['apiKey','image']);
-    if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
+    $validateRes = $checkRequest->validate($request, ['apiKey', 'image']);
+    if (!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback'] == 'error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
     } else {
         $post_data = $validateRes;
@@ -17,26 +17,36 @@ $app->post('/api/GoogleCloudVision/detectLabels', function($request, $response, 
     $body['requests']['features']['type'] = 'LABEL_DETECTION';
 
     //optional limit for number of results
-    if(!empty($post_data['args']['maxResults'])) {
+    if (!empty($post_data['args']['maxResults'])) {
         $body['requests']['features']['maxResults'] = $post_data['args']['maxResults'];
     };
     //optional geo settings
-    if(!empty($post_data['args']['minLatitude'])) {
-        $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = $post_data['args']['minLatitude'];
-    };
-    if(!empty($post_data['args']['minLongitude'])) {
-        $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = $post_data['args']['minLongitude'];
-    };
-    if(!empty($post_data['args']['maxLatitude'])) {
-        $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = $post_data['args']['maxLatitude'];
-    };
-    if(!empty($post_data['args']['maxLongitude'])) {
-        $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = $post_data['args']['maxLongitude'];
-    };
+    if (!empty($post_data['args']['minCoordinates'])) {
+        $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = explode(',', $post_data['args']['minCoordinates'])[0];
+        $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = explode(',', $post_data['args']['minCoordinates'])[1];
+    } else {
+        if (!empty($post_data['args']['minLatitude'])) {
+            $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = $post_data['args']['minLatitude'];
+        };
+        if (!empty($post_data['args']['minLongitude'])) {
+            $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = $post_data['args']['minLongitude'];
+        };
+    }
+
+    if (!empty($post_data['args']['maxCoordinates'])) {
+        $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = explode(',', $post_data['args']['maxCoordinates'])[0];
+        $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = explode(',', $post_data['args']['maxCoordinates'])[1];
+    } else {
+        if (!empty($post_data['args']['maxLatitude'])) {
+            $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = $post_data['args']['maxLatitude'];
+        };
+        if (!empty($post_data['args']['maxLongitude'])) {
+            $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = $post_data['args']['maxLongitude'];
+        };
+    }
 
 
-
-    $query_str = $settings['api_url'].$post_data['args']['apiKey'];
+    $query_str = $settings['api_url'] . $post_data['args']['apiKey'];
 
     //requesting remote API
     $client = $this->httpClient;
@@ -50,7 +60,7 @@ $app->post('/api/GoogleCloudVision/detectLabels', function($request, $response, 
         $error = $rawBody->responses[0]->error;
 
         $all_data[] = $rawBody;
-        if($response->getStatusCode() == '200' && !isset($error)) {
+        if ($response->getStatusCode() == '200' && !isset($error)) {
             $result['callback'] = 'success';
             $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {
