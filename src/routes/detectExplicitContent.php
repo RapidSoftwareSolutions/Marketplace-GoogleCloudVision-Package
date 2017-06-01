@@ -19,8 +19,8 @@ $app->post('/api/GoogleCloudVision/detectExplicitContent', function ($request, $
 
     //optional geo settings
     if (!empty($post_data['args']['minCoordinates'])) {
-        $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = explode(',', $post_data['args']['minCoordinates'])[0];
-        $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = explode(',', $post_data['args']['minCoordinates'])[1];
+        $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = doubleval(explode(',', $post_data['args']['minCoordinates'])[0]);
+        $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = doubleval(explode(',', $post_data['args']['minCoordinates'])[1]);
     } else {
         if (!empty($post_data['args']['minLatitude'])) {
             $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = $post_data['args']['minLatitude'];
@@ -31,8 +31,8 @@ $app->post('/api/GoogleCloudVision/detectExplicitContent', function ($request, $
     }
 
     if (!empty($post_data['args']['maxCoordinates'])) {
-        $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = explode(',', $post_data['args']['maxCoordinates'])[0];
-        $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = explode(',', $post_data['args']['maxCoordinates'])[1];
+        $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = doubleval(explode(',', $post_data['args']['maxCoordinates'])[0]);
+        $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = doubleval(explode(',', $post_data['args']['maxCoordinates'])[1]);
     } else {
         if (!empty($post_data['args']['maxLatitude'])) {
             $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = $post_data['args']['maxLatitude'];
