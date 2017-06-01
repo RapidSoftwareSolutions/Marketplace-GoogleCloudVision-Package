@@ -351,8 +351,8 @@
           "required": true,
           "structure": {
             "name": "image",
-            "type": "File",
-            "info": "Single image"
+            "type": "String",
+            "info": "Single image link"
           }
         },
         {
