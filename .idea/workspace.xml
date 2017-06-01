@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="087ec23e-28d1-4895-a0ab-f4fe41e06092" name="Default" comment="" />
+    <list default="true" id="087ec23e-28d1-4895-a0ab-f4fe41e06092" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/batchPictureDetections.php" afterPath="$PROJECT_DIR$/src/routes/batchPictureDetections.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,15 +27,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="180">
-                <caret line="12" column="108" lean-forward="false" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
+                <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="batchPictureDetections.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/batchPictureDetections.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="82" column="117" lean-forward="false" selection-start-line="82" selection-start-column="117" selection-end-line="82" selection-end-column="117" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,7 +60,6 @@
       <list>
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/src/metadata/metadata.json" />
-        <option value="$PROJECT_DIR$/src/routes/batchPictureDetections.php" />
         <option value="$PROJECT_DIR$/src/routes/batchTypeDetections.php" />
         <option value="$PROJECT_DIR$/src/routes/detectExplicitContent.php" />
         <option value="$PROJECT_DIR$/src/routes/detectImageProperties.php" />
@@ -58,6 +69,7 @@
         <option value="$PROJECT_DIR$/src/routes/detectLogos.php" />
         <option value="$PROJECT_DIR$/src/routes/detectText.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/routes/batchPictureDetections.php" />
       </list>
     </option>
   </component>
@@ -256,12 +268,12 @@
       <workItem from="1490875363195" duration="4000" />
       <workItem from="1490875428647" duration="111000" />
       <workItem from="1496148365904" duration="1154000" />
-      <workItem from="1496250172666" duration="2653000" />
+      <workItem from="1496250172666" duration="3151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4631000" />
+    <option name="totallyTimeSpent" value="5129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="24" width="1855" height="1056" extended-state="6" />
@@ -366,14 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/batchPictureDetections.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="153" lean-forward="false" selection-start-line="49" selection-start-column="153" selection-end-line="49" selection-end-column="153" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/batchTypeDetections.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -450,10 +454,18 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="180">
-            <caret line="12" column="108" lean-forward="false" selection-start-line="12" selection-start-column="108" selection-end-line="12" selection-end-column="108" />
+            <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/batchPictureDetections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="82" column="117" lean-forward="false" selection-start-line="82" selection-start-column="117" selection-end-line="82" selection-end-column="117" />
+          <folding />
         </state>
       </provider>
     </entry>
