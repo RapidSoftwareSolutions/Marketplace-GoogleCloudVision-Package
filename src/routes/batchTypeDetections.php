@@ -34,26 +34,26 @@ $app->post('/api/GoogleCloudVision/batchTypeDetections', function ($request, $re
         };
         //optional geo settings
         if (!empty($post_data['args']['minCoordinates'])) {
-            $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = doubleval(explode(',', $post_data['args']['minCoordinates'])[0]);
-            $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = doubleval(explode(',', $post_data['args']['minCoordinates'])[1]);
+            $body['requests'][$i]['imageContext']['latLongRect']['minLatLng']['latitude'] = doubleval(explode(',', $post_data['args']['minCoordinates'])[0]);
+            $body['requests'][$i]['imageContext']['latLongRect']['minLatLng']['longitude'] = doubleval(explode(',', $post_data['args']['minCoordinates'])[1]);
         } else {
             if (!empty($post_data['args']['minLatitude'])) {
-                $body['requests']['imageContext']['latLongRect']['minLatLng']['latitude'] = $post_data['args']['minLatitude'];
+                $body['requests'][$i]['imageContext']['latLongRect']['minLatLng']['latitude'] = $post_data['args']['minLatitude'];
             };
             if (!empty($post_data['args']['minLongitude'])) {
-                $body['requests']['imageContext']['latLongRect']['minLatLng']['longitude'] = $post_data['args']['minLongitude'];
+                $body['requests'][$i]['imageContext']['latLongRect']['minLatLng']['longitude'] = $post_data['args']['minLongitude'];
             };
         }
 
         if (!empty($post_data['args']['maxCoordinates'])) {
-            $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = doubleval(explode(',', $post_data['args']['maxCoordinates'])[0]);
-            $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = doubleval(explode(',', $post_data['args']['maxCoordinates'])[1]);
+            $body['requests'][$i]['imageContext']['latLongRect']['maxLatLng']['latitude'] = doubleval(explode(',', $post_data['args']['maxCoordinates'])[0]);
+            $body['requests'][$i]['imageContext']['latLongRect']['maxLatLng']['longitude'] = doubleval(explode(',', $post_data['args']['maxCoordinates'])[1]);
         } else {
             if (!empty($post_data['args']['maxLatitude'])) {
-                $body['requests']['imageContext']['latLongRect']['maxLatLng']['latitude'] = $post_data['args']['maxLatitude'];
+                $body['requests'][$i]['imageContext']['latLongRect']['maxLatLng']['latitude'] = $post_data['args']['maxLatitude'];
             };
             if (!empty($post_data['args']['maxLongitude'])) {
-                $body['requests']['imageContext']['latLongRect']['maxLatLng']['longitude'] = $post_data['args']['maxLongitude'];
+                $body['requests'][$i]['imageContext']['latLongRect']['maxLatLng']['longitude'] = $post_data['args']['maxLongitude'];
             };
         }
     }
