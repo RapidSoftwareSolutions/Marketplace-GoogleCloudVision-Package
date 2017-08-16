@@ -241,7 +241,7 @@
               "ur",
               "uz",
               "vi"
-            ],
+            ]
           },
           "info": "List of languages to use for text detection.",
           "required": false
@@ -501,7 +501,7 @@
               "ur",
               "uz",
               "vi"
-            ],
+            ]
           },
           "info": "List of languages to use for text detection. Applied only if 'text' type chosen",
           "required": false
@@ -635,7 +635,7 @@
               "ur",
               "uz",
               "vi"
-            ],
+            ]
           },
           "info": "List of languages to use for text detection. Applied only if 'text' type also chosen",
           "required": false
